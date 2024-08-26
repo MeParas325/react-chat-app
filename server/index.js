@@ -11,6 +11,12 @@ const PORT = process.env.PORT || 5000
 const server = http.createServer(app)
 const io = socketIO(server)
 
+app.use(cors({
+    origin: "https://react-chat-app-frontend-lyart.vercel.app",
+    methods: ["POST", "GET"],
+    credentials: true,
+}))
+
 // checking connected and disconnected user
 io.on("connection", (socket) => {
 

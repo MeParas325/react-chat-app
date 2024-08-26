@@ -19,7 +19,7 @@ const Chat = () => {
   const [messages, setMessages] = useState([])
   const [message, setMessage] = useState("")
 
-  const ENDPOINT = "localhost:5000"
+  const ENDPOINT = "https://react-chat-app-eosin.vercel.app"
 
   const location = useLocation()
 
